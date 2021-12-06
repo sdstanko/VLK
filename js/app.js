@@ -19,6 +19,11 @@ const reviewsSlider = new Swiper('.reviews__slider', {
 		prevEl: '.reviews__button--prev',
 	},
 	autoheight: true,
+	breakpoints: {
+		768: {
+			slidesPerView: 0.33333
+		}
+	}
 });
 let menuBtn = document.querySelector('.header__btn');
 let headerMenu = document.querySelector('.header__menu');
