@@ -655,6 +655,7 @@ input:focus {
   display: -ms-flexbox;
   display: flex;
   padding: 60px 20px 60px 0;
+  padding-right: 10%;
   color: #F1EEE7;
 }
 
@@ -737,6 +738,8 @@ input:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: right;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .footer__multichannel {
@@ -2039,6 +2042,32 @@ input:focus {
 }
 
 @media (max-width: 1200px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__production {
+    padding: 30px 0;
+  }
+
+  .footer__address {
+    max-width: 100%;
+  }
+
+  .footer__body {
+    padding: 30px 0;
+  }
+
+  .footer__body::before {
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: -15px;
+  }
+
   .making__content {
     width: 100%;
     margin: 0;
@@ -2248,6 +2277,70 @@ input:focus {
     padding: 0;
   }
 
+  .footer__production {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__logo {
+    margin-bottom: 20px;
+  }
+
+  .footer__office {
+    margin-bottom: 5px;
+  }
+
+  .footer__address {
+    font-size: 12px;
+  }
+
+  .footer__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__nav {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin-bottom: 45px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .footer__link {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
+
+  .footer__contacts {
+    text-align: center;
+  }
+
+  .footer__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer__confidence {
+    margin-bottom: 15px;
+  }
+
+  .footer__email {
+    margin-bottom: 15px;
+  }
+
   ._no-webp .intro {
     background: #3A3A3A url("../img/intro-bg-sm.png") center bottom no-repeat; }
 
@@ -2352,6 +2445,10 @@ input:focus {
 
   .production .swiper-slide-active .production__description {
     position: relative;
+  }
+
+  .counter-production {
+    display: none;
   }
 
   .request__title {
