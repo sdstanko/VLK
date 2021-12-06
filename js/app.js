@@ -1,11 +1,13 @@
 const swiper = new Swiper('.production__slider', {
 	slidesPerView: 1,
-	spaceBetween: -69,
+	spaceBetween: '-13.045%',
 	navigation: {
 		nextEl: '.production__button--next',
 		prevEl: '.production__button--prev',
 	},
-	autoheight: true,
+	// autoheight: true,
+	
+	
 });
 
 
@@ -18,9 +20,6 @@ const reviewsSlider = new Swiper('.reviews__slider', {
 	},
 	autoheight: true,
 });
-
-
-
 let menuBtn = document.querySelector('.header__btn');
 let headerMenu = document.querySelector('.header__menu');
 let headerArrow = document.querySelector('.header__arrow');

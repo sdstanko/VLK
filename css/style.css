@@ -1105,6 +1105,10 @@ input:focus {
   max-width: 530px;
 }
 
+.calculator__title--adaptive {
+  display: none;
+}
+
 .calculator__info {
   position: relative;
   -webkit-box-flex: 0;
@@ -1331,13 +1335,13 @@ input:focus {
 }
 
 .production__body {
+  position: relative;
   width: calc(50% + 50vw);
   overflow: hidden;
 }
 
 .production__slider {
   width: 41.8%;
-  min-height: 518px;
   margin: 0;
   overflow: visible;
 }
@@ -1347,10 +1351,13 @@ input:focus {
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
+  width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .production__helper {
-  max-width: 608px;
+  max-width: 82.6%;
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
@@ -1379,7 +1386,7 @@ input:focus {
   position: absolute;
   z-index: 2;
   left: 0;
-  bottom: -35px;
+  max-width: 70%;
   font-size: 18px;
   line-height: 189%;
   color: #F1EEE7;
@@ -1408,7 +1415,7 @@ input:focus {
 }
 
 .production .swiper-slide-active {
-  margin-right: 32px !important;
+  margin-right: 4.347% !important;
 }
 
 .production .swiper-slide-active .production__image {
@@ -1423,6 +1430,7 @@ input:focus {
 
 .production .swiper-slide-active .production__helper {
   max-width: 100%;
+  min-height: 100%;
 }
 
 .production .swiper-button-disabled {
@@ -2078,6 +2086,23 @@ input:focus {
   .params-calculator__label {
     font-size: 18px;
   }
+
+  .production {
+    padding: 100px 0 125px;
+  }
+
+  .production__top {
+    margin-bottom: 70px;
+  }
+
+  .production__body {
+    overflow: visible;
+  }
+
+  .production .swiper-slide-active .production__description {
+    left: auto;
+    bottom: auto;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -2200,6 +2225,33 @@ input:focus {
 
   .calculator__info::before {
     display: none;
+  }
+
+  .production {
+    padding: 60px 0 85px;
+  }
+
+  .production__top {
+    margin-bottom: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+
+  .production__title {
+    margin-bottom: 20px;
+  }
+
+  .production__body {
+    width: 100%;
+  }
+
+  .production__slider {
+    width: 100%;
   }
 }
 
