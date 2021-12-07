@@ -912,6 +912,7 @@ input:focus {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 640px;
           flex: 0 1 640px;
+  padding-right: 30px;
 }
 
 .raw__text {
@@ -930,12 +931,25 @@ input:focus {
       flex-wrap: wrap;
 }
 
+.raw__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.raw__button {
+  border: 1px solid #A2B192;
+}
+
+.raw__button::before {
+  background: url("../img/icons/arrow-norway.svg");
+}
+
 .item-raw {
   position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 30%;
           flex: 0 1 30%;
-  max-height: 350px;
   margin-bottom: 100px;
 }
 
@@ -977,6 +991,22 @@ input:focus {
 
 .item-raw__body {
   max-width: 320px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.item-raw__text {
+  padding: 0 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .item-raw__title {
@@ -995,6 +1025,7 @@ input:focus {
 .item-raw__photo {
   position: relative;
   padding-bottom: 100%;
+  max-width: 320px;
 }
 
 .item-raw__image {
@@ -1003,8 +1034,8 @@ input:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .why-us {
@@ -1902,6 +1933,16 @@ input:focus {
   line-height: 170%;
 }
 
+@media (min-width: 768px) {
+  .raw__button {
+    display: none;
+  }
+
+  .item-raw {
+    height: initial;
+  }
+}
+
 @media (min-width: 769px) {
   .header__close {
     display: none;
@@ -2097,6 +2138,68 @@ input:focus {
 
   .making__text {
     font-size: 20px;
+  }
+
+  .raw {
+    padding-bottom: 30px;
+  }
+
+  .raw__head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    margin-bottom: 70px;
+  }
+
+  .raw__title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin-bottom: 20px;
+  }
+
+  .raw__text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+
+  .raw__text {
+    font-size: 15px;
+  }
+
+  .item-raw {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 33.33333%;
+            flex: 0 1 33.33333%;
+    max-height: initial !important;
+  }
+
+  .item-raw:nth-child(3n+2) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 33.33333%;
+            flex: 0 1 33.33333%;
+  }
+
+  .item-raw:nth-child(3n+2)::before,
+  .item-raw:nth-child(3n+2)::after {
+    display: none;
+  }
+
+  .item-raw__body {
+    padding: 0 15px;
+  }
+
+  .item-raw__title {
+    font-size: 28px;
+  }
+
+  .item-raw__subtitle {
+    font-size: 18px;
   }
 
   .why-us__body {
@@ -2363,6 +2466,27 @@ input:focus {
 
   .making__text {
     font-size: 15px;
+  }
+
+  .item-raw {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    margin-bottom: 0;
+  }
+
+  .item-raw:nth-child(3n+2) .item-raw__body {
+    margin: 0;
+  }
+
+  .item-raw:nth-child(3n+2) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+
+  .item-raw:nth-child(3n) .item-raw__body {
+    margin: 0;
   }
 
   .why-us {

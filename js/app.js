@@ -6,8 +6,8 @@ const swiper = new Swiper('.production__slider', {
 		prevEl: '.production__button--prev',
 	},
 	// autoheight: true,
-	
-	
+
+
 });
 
 
@@ -25,6 +25,73 @@ const reviewsSlider = new Swiper('.reviews__slider', {
 		}
 	}
 });
+
+
+
+
+
+
+let rawSlider = null;
+let raw = document.querySelector('.raw');
+let swiperWrapper = raw.querySelector('.swiper-wrapper');
+let mediaQuerySize = 768;
+
+function rawSliderInit () {
+	if (!rawSlider) {
+		const rawSlider = new Swiper('.raw__slider', {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			navigation: {
+				nextEl: '.raw__button--next',
+				prevEl: '.raw__button--prev',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1.4
+				},
+
+				450: {
+					slidesPerView: 2
+				},
+
+				550: {
+					slidesPerView: 3
+				},
+			}
+		});
+	}
+}
+
+function rawSliderDestroy () {
+	if (rawSlider) {
+		rawSlider.destroy();
+		rawSlider = null;
+		
+	}
+}
+
+function listenSlider () {
+	let windowWidth = window.innerWidth;
+	console.log(windowWidth);
+	
+	// Если ширина экрана меньше или равна mediaQuerySize(1024)
+	if (windowWidth <= mediaQuerySize) {
+		// Инициализировать слайдер если он ещё не был инициализирован
+		rawSliderInit()
+		swiperWrapper.classList.add('swiper-wrapper');
+		swiperWrapper.classList.remove('raw__body');
+	} else {
+		// Уничтожить слайдер если он был инициализирован
+		rawSliderDestroy()
+		swiperWrapper.classList.remove('swiper-wrapper');
+		swiperWrapper.classList.add('raw__body');
+	}
+};
+
+window.addEventListener("load", listenSlider);
+window.addEventListener("resize", listenSlider);
+
+
 let menuBtn = document.querySelector('.header__btn');
 let headerMenu = document.querySelector('.header__menu');
 let headerArrow = document.querySelector('.header__arrow');
