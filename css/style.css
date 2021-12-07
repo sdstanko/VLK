@@ -940,6 +940,14 @@ input:focus {
   display: flex;
 }
 
+.raw__buttons .swiper-button-disabled {
+  border: 1px solid #9C9C9C;
+}
+
+.raw__buttons .swiper-button-disabled::before {
+  background: url(../img/icons/arrow-grey.svg);
+}
+
 .raw__button {
   border: 1px solid #A2B192;
 }
@@ -1606,6 +1614,14 @@ input:focus {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 140px;
+}
+
+.reviews__buttons .swiper-button-disabled {
+  border: 1px solid #9C9C9C;
+}
+
+.reviews__buttons .swiper-button-disabled::before {
+  background: url(../img/icons/arrow-grey.svg);
 }
 
 .reviews__button {
