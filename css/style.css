@@ -1350,6 +1350,10 @@ input:focus {
   padding: 150px 0 175px;
 }
 
+.production__container {
+  height: 110%;
+}
+
 .production__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1378,6 +1382,7 @@ input:focus {
   width: 41.8%;
   margin: 0;
   overflow: visible;
+  height: 100%;
 }
 
 .production__item {
@@ -1446,6 +1451,10 @@ input:focus {
   -o-object-fit: cover;
      object-fit: cover;
   mix-blend-mode: screen;
+}
+
+.production .swiper-wrapper {
+  min-height: 100%;
 }
 
 .production .swiper-slide-active {

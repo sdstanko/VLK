@@ -6,7 +6,7 @@ const swiper = new Swiper('.production__slider', {
 		prevEl: '.production__button--prev',
 	},
 	// autoheight: true,
-
+	speed: 300,
 
 });
 
@@ -176,7 +176,19 @@ reviewsButtons.addEventListener("click", function (event) {
 	}
 });
 
-console.log(reviewsSlides);
+
+let productionBody = document.querySelector('.production__body');
+let production = document.querySelector('.production');
+let slideHeight;
+
+setTimeout(() => {
+	slideHeight = production.querySelector('.swiper-slide-active').offsetHeight;
+	console.log(slideHeight);
+	productionBody.style.height = slideHeight + 2 + "px";
+	console.log('done')
+}, 1000);
+
+
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
