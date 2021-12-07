@@ -184,9 +184,9 @@ let slideHeight;
 setTimeout(() => {
 	slideHeight = production.querySelector('.swiper-slide-active').offsetHeight;
 	console.log(slideHeight);
-	productionBody.style.height = slideHeight + 2 + "px";
+	productionBody.style.height = slideHeight + 10 + "px";
 	console.log('done')
-}, 1000);
+}, 100);
 
 
 var ua = window.navigator.userAgent;
