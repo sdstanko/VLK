@@ -12,7 +12,7 @@ const swiper = new Swiper('.production__slider', {
 
 
 const reviewsSlider = new Swiper('.reviews__slider', {
-	// slidesPerView: '1',
+	slidesPerView: 1,
 	// spaceBetween: -69,
 	navigation: {
 		nextEl: '.reviews__button--next',
@@ -20,9 +20,15 @@ const reviewsSlider = new Swiper('.reviews__slider', {
 	},
 	autoheight: true,
 	breakpoints: {
-		768: {
-			slidesPerView: 0.33333
-		}
+		// 320: {
+		// 	slidesPerView: 1
+		// },
+		// 768: {
+		// 	slidesPerView: 2
+		// },
+		// 1024: {
+		// 	slidesPerView: 3
+		// },
 	}
 });
 
@@ -122,7 +128,7 @@ let counterAll = document.querySelector('.counter-production__all')
 let current = document.querySelector('.counter-production__current');
 let buttons = document.querySelector('.production__buttons');
 let slides = document.querySelectorAll('.production__item');
-let reviewsSlides = document.querySelectorAll('.reviews__slide');
+let reviewsSlides = document.querySelectorAll('.reviews__item');
 let reviewsCounterAll = document.querySelector('.counter-reviews__all');
 
 

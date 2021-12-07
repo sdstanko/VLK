@@ -460,6 +460,9 @@ input:focus {
   left: 0;
   width: 100%;
   z-index: 10;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .header__container {
@@ -1615,7 +1618,7 @@ input:focus {
 
 .reviews__slider {
   margin: 0 -100px 0 -73px;
-  overflow: hidden;
+  width: 33.3333%;
 }
 
 .reviews__slide {
@@ -1634,9 +1637,6 @@ input:focus {
 }
 
 .item-reviews {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.33333%;
-          flex: 0 0 33.33333%;
   padding: 0 100px 0 73px;
 }
 
@@ -2622,9 +2622,7 @@ input:focus {
   }
 
   .reviews__slider {
-    margin: 0;
-    width: 50%;
-    overflow: visible;
+    width: 100%;
   }
 
   .item-reviews {
